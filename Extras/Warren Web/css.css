@@ -1,0 +1,82 @@
+
+body {
+    background-image: url("https://img.freepik.com/free-photo/terrifying-screaming-adult-silhouette-studio_23-2150710128.jpg?semt=ais_hybrid&w=740&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;     
+    background-attachment: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background: rgb(70, 4, 4);
+    padding: 15px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(to right, transparent, #320202, transparent);
+    color: rgb(233, 233, 233);
+    transition: all 0.3s ease;
+    font-size: 2.5rem; 
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+h1:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: black;
+     transform: translateY(-10px);
+}
+
+img {
+    margin: 20px auto;
+    border: 2px solid white;
+    padding: 5px;
+    display: block;
+    max-width: 80%; 
+    height: auto;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #8b0000;
+    margin: 40px 0;
+}
+

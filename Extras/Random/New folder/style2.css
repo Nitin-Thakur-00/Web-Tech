@@ -1,0 +1,14 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #919296 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333; /* Add this */
+}
+
+p, li {
+    color: #333; /* Change from #555 to darker */
+    line-height: 1.8;
+    font-size: 1.05em;
+    margin-bottom: 12px;
+}

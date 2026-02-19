@@ -1,0 +1,62 @@
+body {
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(56, 65, 71);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+    background-color: rgb(56, 65, 71);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    gradient: 
+}
+div {
+    text-align: center;
+    margin: 20px;
+    border: 2px solid rgb(0, 0, 0);
+}
+p {
+    text-align: center;
+    border: 1px solid rgb(37, 20, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(72, 59, 38);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a {
+    display: inline-block;
+    background-color: rgb(1, 5, 8);
+    color: rgb(121, 121, 121);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+a:hover {
+    background-color: rgb(56, 65, 71);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+}

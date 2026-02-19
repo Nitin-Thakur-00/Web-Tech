@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/Ferns.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #0f172a;
+    background-blend-mode: overlay;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+}
+#Menu {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    padding: 6px 5px;
+}
+main {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    background: linear-gradient(to right, #fff, #0a4d95);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-left: 8px solid #1d0773;
+    padding-left: 20px;
+}
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+details {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+details[open] {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+summary {
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    padding-left: 25px;
+}
+
+details:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+}
+
+summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.content {
+    padding: 0 20px 20px 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.2s;
+}
+
+li:hover {
+    color: white;
+    padding-left: 10px;
+}
+
+.content ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.content ul li a:hover {
+    color: #142ec0;
+    text-shadow: 0 0 1px rgba(28, 84, 174, 0.5);
+    padding-left: 5px;
+}
+
+li:has(a):hover {
+    padding-left: 0; 
+}

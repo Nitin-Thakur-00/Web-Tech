@@ -1,0 +1,170 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('images/Ferns.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #350606;
+    background-blend-mode: overlay;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    align-self: flex-start;
+    border: none;
+    margin: 0;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+}
+#Menu {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    padding: 6px 5px;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border-left: 5px solid #d35151;
+    padding-left: 20px;
+    background: linear-gradient(to right, #fff, #410202);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-left: 8px solid #9d0e0e;
+}
+
+fieldset {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+legend {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255);
+}
+
+input, select, textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    margin-top: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+fieldset hr {
+    display: none;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+section {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+address {
+    align-items: center;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+address a {
+    color: white;
+    text-decoration: underline;
+}
+
+#issue {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+}
+
+#issue option {
+    background-color: #1f0101;
+    color: white;
+    font-size: 1rem;
+}

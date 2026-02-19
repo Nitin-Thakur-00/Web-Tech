@@ -1,0 +1,200 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background: url('../images/Ferns.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #2b0229;
+    background-blend-mode: overlay;
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+}
+#Menu {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    padding: 6px 5px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fff, #710579);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-left: 8px solid #8b2388;
+    padding-left: 20px;
+    margin: 40px 0;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(166, 42, 183, 0.3);
+}
+
+figure {
+    margin: 0;
+    flex: 1;
+    min-width: 350px;
+    text-align: center;
+}
+
+.glass-card img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.6));
+}
+
+figcaption {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.card-info {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+.specs h3 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e0a0df;
+    margin-bottom: 15px;
+}
+
+.specs ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+.specs li {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.specs li:hover {
+    background: rgba(177, 103, 165, 0.1);
+    border-color: rgba(101, 22, 93, 0.4);
+    transform: scale(1.02);
+}
+
+.specs li strong {
+    color: #dfa4e3;
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.cart-action {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.qty-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 15px;
+    border-radius: 12px;
+}
+
+.qty-wrapper label {
+    font-size: 0.6rem;
+    font-weight: 900;
+    margin-right: 10px;
+    color: #c281b9;
+}
+
+.qty-wrapper input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    width: 30px;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.add-btn {
+    flex: 1;
+    background: #340a2e;
+    color: #eee9ed;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #493b47;
+    transform: scale(1.02);
+}
