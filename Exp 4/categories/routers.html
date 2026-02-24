@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="routers_css.css">
+    <title>Next-Gen Networking</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a> 
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Next-Gen Wi-Fi 7 Routers</h1>
+        <div class="category-container">
+            
+            <article class="glass-card">
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcbup7yJESuf_B35rRdCtkXrNY3HDcyv040w&s" alt="TP-Link Deco BE95">
+                    <figcaption>Ultimate mesh coverage for smart homes and high-bandwidth 8K streaming.</figcaption>
+                </figure>
+
+                <div class="card-info">
+                    <h2>TP-Link Deco BE95 (3-Pack)</h2>
+                    <div class="specs">
+                        <h3>Technical Specifications</h3>
+                        <ul>
+                            <li><strong>Speed</strong> 33 Gbps Quad-Band Wi-Fi 7</li>
+                            <li><strong>Ports</strong> Dual 10Gbps WAN/LAN Ports</li>
+                            <li><strong>Coverage</strong> Up to 9,000 sq. ft.</li>
+                            <li><strong>Backhaul</strong> Dedicated 6GHz Wireless/Wired</li>
+                            <li><strong>Capacity</strong> Supports 200+ Devices</li>
+                            <li><strong>Security</strong> HomeShield Real-Time Protection</li>
+                        </ul>
+                    </div>
+                    <p>Price: <strong>Rs. 1,45,000.00</strong> <mark>Whole Home Mesh</mark></p>
+                    
+                    <form class="cart-action">
+                        <div class="qty-wrapper">
+                            <button type="button" class="qty-btn" onclick="decreaseQty('qty_r1')">-</button>
+                            <input type="number" id="qty_r1" value="1" min="1" max="5" readonly>
+                            <button type="button" class="qty-btn" onclick="increaseQty('qty_r1')">+</button>
+                        </div>
+                        <button type="submit" class="add-btn">Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+            <article class="glass-card">
+                <figure>
+                    <img src="https://cdn.mos.cms.futurecdn.net/obDpwm2i7J4NYu7QciqSx8.jpg" alt="ASUS ROG Rapture">
+                    <figcaption>Gaming flagship featuring 320MHz bandwidth for ultra-low latency.</figcaption>
+                </figure>
+
+                <div class="card-info">
+                    <h2>ASUS ROG Rapture GT-BE98</h2>
+                    <div class="specs">
+                        <h3>Technical Specifications</h3>
+                        <ul>
+                            <li><strong>Bandwidth</strong> 320MHz Channels & 4K-QAM</li>
+                            <li><strong>Gaming</strong> Triple-level Acceleration</li>
+                            <li><strong>Processor</strong> 2.6GHz Quad-Core 64-bit</li>
+                            <li><strong>RGB</strong> ASUS Aura Sync Lighting</li>
+                            <li><strong>Features</strong> Multi-Link Operation (MLO)</li>
+                            <li><strong>IO</strong> 10G & 2.5G Gaming Ports</li>
+                        </ul>
+                    </div>
+                    <p>Price: <strong>Rs. 82,999.00</strong> <small><i>(Gaming Priority)</i></small></p>
+                    
+                    <form class="cart-action">
+                        <div class="qty-wrapper">
+                            <button type="button" class="qty-btn" onclick="decreaseQty('qty_r2')">-</button>
+                            <input type="number" id="qty_r2" value="1" min="1" max="3" readonly>
+                            <button type="button" class="qty-btn" onclick="increaseQty('qty_r2')">+</button>
+                        </div>
+                        <button type="submit" class="add-btn">Add to Cart</button>
+                    </form>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <script>
+        function increaseQty(id) {
+            let input = document.getElementById(id);
+            let currentVal = parseInt(input.value);
+            let maxVal = parseInt(input.max);
+            if (currentVal < maxVal) {
+                input.value = currentVal + 1;
+            }
+        }
+
+        function decreaseQty(id) {
+            let input = document.getElementById(id);
+            let currentVal = parseInt(input.value);
+            let minVal = parseInt(input.min);
+            if (currentVal > minVal) {
+                input.value = currentVal - 1;
+            }
+        }
+    </script>
+</body>
+</html>
