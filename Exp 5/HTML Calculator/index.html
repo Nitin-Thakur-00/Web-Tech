@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calculator_css.css">
-    <title>Tech Glass Calculator</title>
-</head>
+<html>
 <body>
 
-    <div class="calc-container">
-        <div class="calculator">
-            <input type="text" id="display" readonly placeholder="0">
-            
-            <div class="buttons">
-                <button class="btn clear" onclick="clearDisplay()">CE</button>
-                <button class="btn tool" onclick="deleteLast()">DEL</button>
-                <button class="btn tool" onclick="appendToDisplay('/')">/</button>
-                <button class="btn" onclick="appendToDisplay('7')">7</button>
-                <button class="btn" onclick="appendToDisplay('8')">8</button>
-                <button class="btn" onclick="appendToDisplay('9')">9</button>
-                <button class="btn tool" onclick="appendToDisplay('*')">×</button>
-                <button class="btn" onclick="appendToDisplay('4')">4</button>
-                <button class="btn" onclick="appendToDisplay('5')">5</button>
-                <button class="btn" onclick="appendToDisplay('6')">6</button>
-                <button class="btn tool" onclick="appendToDisplay('-')">-</button>
-                <button class="btn" onclick="appendToDisplay('1')">1</button>
-                <button class="btn" onclick="appendToDisplay('2')">2</button>
-                <button class="btn" onclick="appendToDisplay('3')">3</button>
-                <button class="btn tool" onclick="appendToDisplay('+')">+</button>
-                <button class="btn" onclick="appendToDisplay('0')">0</button>
-                <button class="btn" onclick="appendToDisplay('.')">.</button>
-                <button class="btn equal" onclick="calculate()">=</button>
-            </div>
-        </div>
-    </div>
+    <h2>Simple Calculator</h2>
 
-    <script src="calculator_js.js"></script>
+    <input type="number" id="num1" placeholder="First Number">
+    <input type="number" id="num2" placeholder="Second Number">
+
+    <br><br>
+
+    <button onclick="calculate('+')">Add</button>
+    <button onclick="calculate('-')">Subtract</button>
+    <button onclick="calculate('*')">Multiply</button>
+    <button onclick="calculate('/')">Divide</button>
+
+    <h3>Result: <span id="result"></span></h3>
+
+    <script>
+        function calculate(operator) {
+            const n1 = parseFloat(document.getElementById('num1').value);
+            const n2 = parseFloat(document.getElementById('num2').value);
+            let res = 0;
+
+            if (operator === '+') res = n1 + n2;
+            if (operator === '-') res = n1 - n2;
+            if (operator === '*') res = n1 * n2;
+            if (operator === '/') res = n1 / n2;
+            document.getElementById('result').innerText = res;
+        }
+    </script>
+
 </body>
 </html>
+
+
+
+            <button class="btn" onclick="appendToDisplay('7')">7</button>
+            <button class="btn" onclick="appendToDisplay('8')">8</button>
+            <button class="btn" onclick="appendToDisplay('9')">9</button>
+            <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+
+            <button class="btn" onclick="appendToDisplay('4')">4</button>
+            <button class="btn" onclick="appendToDisplay('5')">5</button>
+            <button class="btn" onclick="appendToDisplay('6')">6</button>
+            <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+
+            <button class="btn" onclick="appendToDisplay('1')">1</button>
+            <button class="btn" onclick="appendToDisplay('2')">2</button>
+            <button class="btn" onclick="appendToDisplay('3')">3</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+
+            <button class="btn col-2" onclick="appendToDisplay('0')">0</button>
+            <button class="btn" onclick="appendToDisplay('.')">.</button>
+        </div>
