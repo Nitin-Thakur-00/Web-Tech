@@ -1,0 +1,150 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: url('https://wallpapercave.com/wp/wp9372041.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #1c1c1c;
+    background-blend-mode: overlay;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.timer-container {
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    padding: 50px;
+    text-align: center;
+    width: 550px;
+    max-width: 95vw;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+}
+
+h1 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.glass-display {
+    font-size: 3.2rem;
+    font-weight: 900;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 35px 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+.glass-display::-webkit-scrollbar {
+    display: none;
+}
+
+.input-group {
+    margin: 20px auto 40px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+input[type="number"] {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 18px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="number"]:focus {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    flex: 1;
+    padding: 18px 10px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.control-module {
+    margin: 20px auto 50px auto;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start { background: #cbc8c8; color: #000000; }
+.stop { background: rgba(255, 255, 255, 0.1); color: white; }
+.reset { background: #480000; color: white; }
+
