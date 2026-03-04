@@ -45,17 +45,19 @@ function startTimer() {
             clearInterval(countdown);
             timeLeft = 0;
             updateDisplay(0);
-            
+
             setTimeout(() => {
                 alert(" TIMER HAS HALTED.");
                 resetTimer();
             }, 100);
         }
     }, 1000);
+    display.classList.add('timer-active');
 }
 
 function stopTimer() {
     clearInterval(countdown);
+    display.classList.remove('timer-active');
 }
 
 function resetTimer() {
@@ -63,9 +65,10 @@ function resetTimer() {
     timeLeft = null;
     display.innerText = "00 : 00";
     input.value = "";
+    display.classList.remove('timer-active');
 }
 
-input.addEventListener('input', function() {
+input.addEventListener('input', function () {
     if (this.value < 0) this.value = 0;
     if (this.value.length > 9) this.value = this.value.slice(0, 9);
     timeLeft = parseInt(this.value);
