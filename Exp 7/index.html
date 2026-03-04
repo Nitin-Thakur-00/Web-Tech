@@ -32,6 +32,14 @@
         <label>Contact Number:</label>
         <input type="tel" id="phone" placeholder="+91 8567898754">
 
+        <label><strong>Year of Study:</strong></label>
+        <div class="radio-group">
+            <label><input type="radio" name="year" value="1st" checked> 1st</label>
+            <label><input type="radio" name="year" value="2nd"> 2nd</label>
+            <label><input type="radio" name="year" value="3rd"> 3rd</label>
+            <label><input type="radio" name="year" value="4th"> 4th</label>
+        </div>
+
         <label><strong>Project Domain:</strong></label>
         <div class="check-group">
             <label><input type="checkbox" name="domain" value="Cybersecurity"> Cybersecurity</label>
@@ -52,21 +60,48 @@
             <div id="file-name-display" class="file-name-text">No file chosen</div>
         </div>
 
-        <button type="button" onclick="displayRegistration()">Register Team</button>
+        <button type="button" onclick="processRegistration()">Register Team</button>
     </form>
 
     <hr>
 
-    <div id="displayArea">
-        <p>Awaiting registration...</p>
+    <div id="displayArea" style="display:none;">
+        </div>
+
+    <hr>
+
+    <div id="table-section">
+        <h3>All Registrations</h3>
+        <div class="table-responsive">
+            <table id="registrationTable">
+                <thead>
+                    <tr>
+                        <th>Members</th>
+                        <th>Email</th>
+                        <th>Year</th>
+                        <th>Domains</th>
+                        <th>Project Idea</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="action-buttons">
+            <button class="secondary-btn" onclick="copyTable()">Copy Table</button>
+            <button class="secondary-btn" onclick="downloadCSV()">Download CSV</button>
+        </div>
     </div>
 
+    <script src="ideathon_js.js"></script>
     <script>
         function updateFileName() {
             const input = document.getElementById('pptFile');
             const display = document.getElementById('file-name-display');
             display.innerText = input.files[0] ? `Selected: ${input.files[0].name}` : "No file chosen";
         }
+
         function adjustFields(size) {
             const container = document.getElementById('memberFields');
             container.innerHTML = ""; 
@@ -76,44 +111,6 @@
                     <input type="text" class="memberName" placeholder="Full Name">
                 `;
             }
-        }
-        function displayRegistration() {
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const idea = document.getElementById('idea').value;
-            
-            const ppt = document.getElementById('pptFile').files[0];
-            const pptName = ppt ? ppt.name : "No file uploaded";
-
-            const nameInputs = document.querySelectorAll('.memberName');
-            let names = [];
-            nameInputs.forEach(input => {
-                if(input.value) names.push(input.value);
-            });
-
-            const domainBoxes = document.querySelectorAll('input[name="domain"]:checked');
-            let domains = [];
-            domainBoxes.forEach(box => domains.push(box.value));
-
-            if (names.length === 0 || !email) {
-                alert("Please fill in at least the leader's name and email!");
-                return;
-            }
-
-            alert("Registration Complete!");
-
-            const output = document.getElementById('displayArea');
-            output.innerHTML = `
-                <h3>Submission Recorded</h3>
-                <div class="data-row"><strong>Team:</strong> ${names.join(', ')}</div>
-                <div class="data-row"><strong>Contact:</strong> ${email} | ${phone}</div>
-                <div class="data-row"><strong>Domains:</strong> ${domains.join(', ') || 'None'}</div>
-                <div class="data-row"><strong>Brief:</strong> ${idea}</div>
-                <div class="data-row"><strong>File:</strong> ${pptName}</div>
-            `;
-            
-            output.style.display = "block";
-            output.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
