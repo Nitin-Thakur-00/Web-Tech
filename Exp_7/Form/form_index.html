@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideathon 2026 Registration</title>
+    <link rel="stylesheet" href="ideathon_css.css">
+</head>
+<body>
+
+    <h2>Ideathon 2026 Registration</h2>
+    
+    <form id="regForm">
+        <div class="section">
+            <label><strong>Team Size:</strong></label>
+            <div class="radio-group">
+                <label><input type="radio" name="teamSize" value="1" onclick="adjustFields(1)" checked> 1</label>
+                <label><input type="radio" name="teamSize" value="2" onclick="adjustFields(2)"> 2</label>
+                <label><input type="radio" name="teamSize" value="3" onclick="adjustFields(3)"> 3</label>
+                <label><input type="radio" name="teamSize" value="4" onclick="adjustFields(4)"> 4</label>
+            </div>
+        </div>
+
+        <div id="memberFields">
+            <label>Member 1 Name:</label>
+            <input type="text" class="memberName" placeholder="Full Name">
+        </div>
+
+        <label>Leader Email:</label>
+        <input type="email" id="email" placeholder="leader@gmail.com">
+
+        <label>Contact Number:</label>
+        <input type="tel" id="phone" placeholder="+91 8567898754">
+
+        <label><strong>Year of Study:</strong></label>
+        <div class="radio-group">
+            <label><input type="radio" name="year" value="1st" checked> 1st</label>
+            <label><input type="radio" name="year" value="2nd"> 2nd</label>
+            <label><input type="radio" name="year" value="3rd"> 3rd</label>
+            <label><input type="radio" name="year" value="4th"> 4th</label>
+        </div>
+
+        <label><strong>Project Domain:</strong></label>
+        <div class="check-group">
+            <label><input type="checkbox" name="domain" value="Cybersecurity"> Cybersecurity</label>
+            <label><input type="checkbox" name="domain" value="Web Dev"> Web Development</label>
+            <label><input type="checkbox" name="domain" value="App Dev"> App Development</label>
+            <label><input type="checkbox" name="domain" value="Database"> Database Management</label>
+        </div>
+
+        <label><strong>Project Brief:</strong></label>
+        <textarea id="idea" placeholder="Briefly describe your innovative project..."></textarea>
+
+        <label>Upload PPT/PDF:</label>
+        <div class="file-container">
+            <label for="pptFile" class="custom-file-upload">
+                <span id="file-label-text">Click to select PPT or PDF</span>
+            </label>
+            <input type="file" id="pptFile" onchange="updateFileName()">
+            <div id="file-name-display" class="file-name-text">No file chosen</div>
+        </div>
+
+        <button type="button" onclick="processRegistration()">Register Team</button>
+    </form>
+
+    <hr>
+
+    <div id="displayArea" style="display:none;">
+        </div>
+
+    <hr>
+
+    <div id="table-section">
+        <h3>All Registrations</h3>
+        <div class="table-responsive">
+            <table id="registrationTable">
+                <thead>
+                    <tr>
+                        <th>Members</th>
+                        <th>Email</th>
+                        <th>Year</th>
+                        <th>Domains</th>
+                        <th>Project Idea</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="action-buttons">
+            <button class="secondary-btn" onclick="copyTable()">Copy Table</button>
+            <button class="secondary-btn" onclick="downloadCSV()">Download CSV</button>
+        </div>
+    </div>
+
+    <script src="ideathon_js.js"></script>
+    <script>
+        function updateFileName() {
+            const input = document.getElementById('pptFile');
+            const display = document.getElementById('file-name-display');
+            display.innerText = input.files[0] ? `Selected: ${input.files[0].name}` : "No file chosen";
+        }
+
+        function adjustFields(size) {
+            const container = document.getElementById('memberFields');
+            container.innerHTML = ""; 
+            for (let i = 1; i <= size; i++) {
+                container.innerHTML += `
+                    <label>Member ${i} Name:</label>
+                    <input type="text" class="memberName" placeholder="Full Name">
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
