@@ -1,16 +1,9 @@
 <?php
-// --- DATABASE CONFIGURATION (InfinityFree Setup) ---
-// 1. Log in to your InfinityFree Control Panel.
-// 2. Go to "MySQL Databases".
-// 3. Create a new database if you haven't already.
-// 4. Copy your "MySQL Host", "MySQL Username", "MySQL Password", and "Database Name" here.
-
-$host = 'sql107.infinityfree.com';        // Usually something like sqlXXX.infinityfree.com
-$db = 'if0_41597931_web_tech';         // Usually something like if0_XXXXX_web_tech
-$user = 'if0_41597931';             // Usually something like if0_XXXXX
-$pass = 'mimikyu9686';                 // Your InfinityFree account password
+$host = 'sql107.infinityfree.com';
+$db = 'if0_41597931_web_tech';
+$user = 'if0_41597931';
+$pass = 'mimikyu9686';
 $charset = 'utf8mb4';
-// --------------------------------------------------
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 $options = [
@@ -25,7 +18,6 @@ try {
     $db_error = $e->getMessage();
 }
 
-// API Request Handler
 if (isset($_GET['api'])) {
     header('Content-Type: application/json');
     if (isset($db_error)) {
