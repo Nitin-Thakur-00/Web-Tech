@@ -1,0 +1,42 @@
+[data-theme='light'] {
+    /* Luminous Sanctuary Palette */
+    --color-primary: #991b1b; /* Deep Crimson */
+    --color-primary-rgb: 153, 27, 27;
+    --color-secondary: #d97706; /* Amber Gold */
+    --color-secondary-rgb: 217, 119, 6;
+    --color-background: #fbf9f4; /* Ancient Parchment */
+    --color-surface: #ffffff;
+    --color-surface-glass: rgba(153, 27, 27, 0.02);
+    --glass-border: rgba(153, 27, 27, 0.12);
+    --color-border: rgba(153, 27, 27, 0.12);
+
+    --color-text-primary: #111111;
+    --color-text-secondary: #374151;
+    --color-text-tertiary: #6b7280;
+
+    --btn-primary-bg: #991b1b;
+    --btn-primary-hover: #7f1d1d;
+    --btn-primary-text: #ffffff;
+
+    --color-success: rgba(22, 101, 52, 0.08);
+    --color-success-rgb: 22, 101, 52;
+    --color-success-strong: #166534;
+    --color-warning: rgba(146, 64, 14, 0.08);
+    --color-warning-rgb: 146, 64, 14;
+    --color-warning-strong: #92400e;
+    --color-danger: rgba(153, 27, 27, 0.08);
+    --color-danger-rgb: 153, 27, 27;
+    --color-danger-strong: #991b1b;
+
+    /* Component tokens */
+    --radius-card: 1rem;
+    --radius-button: 0.65rem;
+    --radius-input: 0.65rem;
+    --color-border: rgba(153,27,27,0.12);
+    --shadow-sm: 0 4px 16px rgba(0,0,0,0.06);
+    --glass-shadow: 0 10px 40px rgba(0,0,0,0.09);
+    --glass-shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+    --color-info: rgba(14,165,233,0.08);
+    --color-info-rgb: 14, 165, 233;
+    --color-info-strong: #0369a1;
+}

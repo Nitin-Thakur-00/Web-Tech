@@ -1,0 +1,41 @@
+[data-theme='dark'] {
+    /* Nocturnal Brutalist Palette */
+    --color-primary: #ff3333; /* Vibrant Red */
+    --color-primary-rgb: 255, 51, 51;
+    --color-secondary: #3355ff; /* Deep Blue */
+    --color-secondary-rgb: 51, 85, 255;
+    --color-background: #050505; /* True Obsidian */
+    --color-surface: rgba(17, 17, 17, 0.7);
+    --color-surface-glass: rgba(17, 17, 17, 0.4);
+    --glass-border: rgba(48, 48, 48, 0.6);
+    --color-border: rgba(48, 48, 48, 0.6);
+
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #888888;
+    --color-text-tertiary: #525252;
+
+    --btn-primary-bg: rgba(255, 51, 51, 0.12);
+    --btn-primary-hover: rgba(255, 51, 51, 0.25);
+    --btn-primary-text: #ffffff;
+
+    --color-success: rgba(34, 197, 94, 0.1);
+    --color-success-rgb: 34, 197, 94;
+    --color-success-strong: #4ade80;
+    --color-warning: rgba(245, 158, 11, 0.1);
+    --color-warning-rgb: 245, 158, 11;
+    --color-warning-strong: #fbbf24;
+    --color-danger: rgba(255, 51, 51, 0.15);
+    --color-danger-rgb: 255, 51, 51;
+    --color-danger-strong: #ff3333;
+
+    /* Component tokens */
+    --radius-card: 0px;
+    --radius-button: 0px;
+    --radius-input: 0px;
+    --shadow-sm: none;
+    --glass-shadow: none;
+    --glass-shadow-lg: none;
+    --color-info: rgba(51,85,255,0.15);
+    --color-info-rgb: 51, 85, 255;
+    --color-info-strong: #3355ff;
+}
