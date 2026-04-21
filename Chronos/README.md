@@ -114,6 +114,3 @@ Contributions are what make the open source community such an amazing place to l
 ## 🙏 Acknowledgments
 *   **Sanctuary UI Context**: Inspiration drawn from elite Brutalist architectures and cinematic film-grain integration on web interfaces.
 *   The raw vanilla CSS and JS communities for continually pushing the bound of what is possible without heavy frameworks.
-
-## 📜 License
-Distributed under the MIT License. See `LICENSE` for more information.
